@@ -126,112 +126,294 @@
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="pt-16 pb-24 px-6 relative overflow-hidden">
-        <div
-            class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-emeraldNeon/10 rounded-full blur-[140px] pointer-events-none">
+    <main class="max-w-6xl mx-auto px-4 py-8 sm:py-12 space-y-12 w-full">
+
+        <!-- HERO TITLE -->
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold tracking-wide uppercase">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> Simulador Interativo para Empresários
+            </div>
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                Veja como sua empresa fica no <span
+                    class="bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-500 bg-clip-text text-transparent">Topo
+                    do Google</span>
+            </h2>
+            <p class="text-slate-400 text-base sm:text-lg">
+                Preencha os dados do seu negócio abaixo para simular em tempo real sua posição no Google Maps e calcular
+                o potencial de novos clientes na sua região.
+            </p>
         </div>
 
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
+        <!-- MAIN INTERACTIVE SECTION (2 COLUMNS) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+            <!-- FORM CONTROLS (5 COLS) -->
+            <div class="lg:col-span-5 bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-6">
+                <div class="border-b border-slate-700/60 pb-4">
+                    <h3 class="font-bold text-lg text-white flex items-center gap-2">
+                        <i class="fa-solid fa-sliders text-emerald-400"></i> Dados da Sua Empresa
+                    </h3>
+                    <p class="text-xs text-slate-400">Configure para simular o resultado no Google Maps</p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Nome da Empresa -->
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
+                            Nome da Sua Empresa ou Marca
+                        </label>
+                        <div class="relative">
+                            <i class="fa-solid fa-store absolute left-3.5 top-3.5 text-slate-500 text-sm"></i>
+                            <input type="text" id="inputBusinessName" value="FinaFenos Clinic"
+                                class="w-full bg-slate-950 border border-slate-700 rounded-xl py-2.5 pl-10 pr-4 text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors"
+                                placeholder="Ex: Hamburgueria do Zé, Clínica Luz...">
+                        </div>
+                    </div>
+
+                    <!-- Nicho / Categoria -->
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
+                            Nicho / Categoria de Serviço
+                        </label>
+                        <div class="relative">
+                            <i class="fa-solid fa-briefcase absolute left-3.5 top-3.5 text-slate-500 text-sm"></i>
+                            <input type="text" id="inputCategory" value="Clínica de Massoterapia & Estética"
+                                class="w-full bg-slate-950 border border-slate-700 rounded-xl py-2.5 pl-10 pr-4 text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors"
+                                placeholder="Ex: Odontologia, Oficina Mecânica, Pizzaria...">
+                        </div>
+                    </div>
+
+                    <!-- Bairro / Cidade -->
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
+                            Bairro e Cidade
+                        </label>
+                        <div class="relative">
+                            <i class="fa-solid fa-location-dot absolute left-3.5 top-3.5 text-slate-500 text-sm"></i>
+                            <select id="inputLocation"
+                                class="w-full bg-slate-950 border border-slate-700 rounded-xl py-2.5 pl-10 pr-8 text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors appearance-none cursor-pointer">
+                                <option value="Olaria, Nova Friburgo - RJ">Olaria, Nova Friburgo - RJ</option>
+                                <option value="Centro, Nova Friburgo - RJ" selected>Centro, Nova Friburgo - RJ</option>
+                                <option value="Cônego, Nova Friburgo - RJ">Cônego, Nova Friburgo - RJ</option>
+                                <option value="Mury, Nova Friburgo - RJ">Mury, Nova Friburgo - RJ</option>
+                                <option value="Conselheiro Paulino, Nova Friburgo - RJ">Conselheiro Paulino, Nova
+                                    Friburgo - RJ</option>
+                                <option value="Braunes, Nova Friburgo - RJ">Braunes, Nova Friburgo - RJ</option>
+                                <option value="Teresópolis - RJ">Teresópolis - RJ</option>
+                                <option value="Petrópolis - RJ">Petrópolis - RJ</option>
+                            </select>
+                            <i
+                                class="fa-solid fa-chevron-down absolute right-3.5 top-3.5 text-slate-500 text-xs pointer-events-none"></i>
+                        </div>
+                    </div>
+
+                    <!-- Palavra de Busca do Cliente -->
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
+                            Termo que seu cliente pesquisa no Google
+                        </label>
+                        <div class="relative">
+                            <i
+                                class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-500 text-sm"></i>
+                            <input type="text" id="inputSearchTerm" value="Massoterapia no Centro"
+                                class="w-full bg-slate-950 border border-slate-700 rounded-xl py-2.5 pl-10 pr-4 text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors"
+                                placeholder="Ex: Dentista urgente, Pousada charmosa...">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRESET QUICK BUTTONS -->
+                <div class="pt-2 border-t border-slate-700/60">
+                    <span class="text-xs text-slate-400 font-medium block mb-2">Testar exemplos rápidos:</span>
+                    <div class="flex flex-wrap gap-2">
+                        <button
+                            onclick="applyPreset('Hamburgueria Gourmet', 'Hamburgueria & Artesanal', 'Cônego, Nova Friburgo - RJ', 'Melhor Hambúrguer no Cônego')"
+                            class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-2.5 py-1 rounded-lg border border-slate-700 transition-colors cursor-pointer">
+                            🍔 Hamburgueria
+                        </button>
+                        <button
+                            onclick="applyPreset('Dra. Amanda Silva', 'Consultório Odontológico', 'Centro, Nova Friburgo - RJ', 'Dentista no Centro Friburgo')"
+                            class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-2.5 py-1 rounded-lg border border-slate-700 transition-colors cursor-pointer">
+                            🦷 Odonto
+                        </button>
+                        <button
+                            onclick="applyPreset('Auto Elétrica Serrana', 'Oficina Mecânica & Auto Elétrica', 'Conselheiro Paulino, Nova Friburgo - RJ', 'Oficina mecânica perto de mim')"
+                            class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-2.5 py-1 rounded-lg border border-slate-700 transition-colors cursor-pointer">
+                            🚗 Oficina
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PREVIEW CARD (7 COLS) -->
             <div class="lg:col-span-7 space-y-6">
+
+                <!-- PREVIEW BOX -->
                 <div
-                    class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-emeraldNeon text-xs font-semibold tracking-wide uppercase">
-                    <i class="fa-solid fa-location-dot"></i> Região Serrana & Rio de Janeiro
-                </div>
+                    class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-2xl relative overflow-hidden">
 
-                <h1
-                    class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight">
-                    Sua empresa no <br><span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-emeraldNeon via-teal-300 to-goldDust">Topo
-                        do Google.</span><br>Mais clientes no seu WhatsApp.
-                </h1>
+                    <!-- Top Status Bar -->
+                    <div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-700/60">
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            <span class="text-xs font-mono text-slate-400 ml-2">google.com.br/maps</span>
+                        </div>
+                        <span
+                            class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-2.5 py-1 rounded-md flex items-center gap-1.5">
+                            <i class="fa-solid fa-trophy text-amber-400"></i> #1 LUGAR NO GOOGLE MAPS
+                        </span>
+                    </div>
 
-                <p class="text-base text-slate-400 max-w-2xl leading-relaxed">
-                    Especialista em atrair clientes locais através da otimização do Google Maps e Sites de alta
-                    conversão. Sem mensalidades presas ou códigos complicados.
-                </p>
+                    <!-- Simulated Google Search Bar -->
+                    <div
+                        class="bg-slate-950 border border-slate-700/80 rounded-xl p-3 mb-6 flex items-center justify-between shadow-inner">
+                        <div class="flex items-center gap-3 overflow-hidden">
+                            <i class="fa-solid fa-magnifying-glass text-emerald-400 text-base shrink-0"></i>
+                            <span id="previewSearchTerm" class="text-sm font-medium text-slate-200 truncate">
+                                Massoterapia no Centro
+                            </span>
+                        </div>
+                        <span
+                            class="text-xs text-slate-400 bg-slate-900 px-2 py-1 rounded border border-slate-800 shrink-0">
+                            Friburgo e Região
+                        </span>
+                    </div>
 
-                <div class="flex flex-wrap items-center gap-4 pt-2">
-                    <a href="#" id="btn-wa-hero" target="_blank"
-                        class="bg-emeraldNeon hover:bg-emeraldHover text-slate-950 font-bold px-8 py-4 rounded-xl shadow-xl shadow-emeraldNeon/20 transition-all hover:-translate-y-0.5 flex items-center gap-3">
-                        <i class="fa-brands fa-whatsapp text-xl"></i>
-                        <span>Quero ter mais clientes</span>
-                    </a>
-                    <a href="#cases"
-                        class="border border-borderDark hover:border-slate-600 bg-slate-900/40 text-slate-300 font-semibold px-6 py-4 rounded-xl transition-all">
-                        Ver projetos de empresas parceiras
-                    </a>
+                    <!-- THE GOOGLE MAPS RESULT CARD -->
+                    <div
+                        class="bg-slate-950 border border-emerald-500/40 rounded-xl p-4 sm:p-5 relative space-y-4 hover:border-emerald-500/70 transition-all">
+
+                        <!-- Header Row -->
+                        <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+                            <div>
+                                <div class="flex items-center gap-2 flex-wrap">
+                                    <h4 id="previewBusinessName" class="text-xl font-bold text-white tracking-tight">
+                                        FinaFenos Clinic
+                                    </h4>
+                                    <span class="text-emerald-400 text-base" title="Perfil Verificado no Google">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                    </span>
+                                </div>
+                                <p id="previewCategory" class="text-xs text-slate-400 mt-0.5">
+                                    Clínica de Massoterapia & Estética
+                                </p>
+                            </div>
+
+                            <!-- Rating Badges -->
+                            <div
+                                class="flex items-center gap-1.5 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg shrink-0 self-start">
+                                <span class="text-amber-400 font-extrabold text-sm">5.0</span>
+                                <div class="flex text-amber-400 text-xs">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="text-xs text-slate-400 font-medium">(48 avaliações)</span>
+                            </div>
+                        </div>
+
+                        <!-- Status & Location Row -->
+                        <div class="text-xs text-slate-300 space-y-1.5 border-t border-slate-800 pt-3">
+                            <div class="flex items-center gap-2">
+                                <span class="text-emerald-400 font-bold bg-emerald-500/10 px-1.5 py-0.5 rounded">ABERTO
+                                    AGORA</span>
+                                <span class="text-slate-400">• Fecha às 19:00</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-slate-400">
+                                <i class="fa-solid fa-location-dot text-rose-400 w-4 text-center"></i>
+                                <span id="previewLocation">Centro, Nova Friburgo - RJ</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-slate-400">
+                                <i class="fa-solid fa-globe text-emerald-400 w-4 text-center"></i>
+                                <span class="text-emerald-400 hover:underline">Website Oficial Otimizado e com
+                                    Agendamento Direto</span>
+                            </div>
+                        </div>
+
+                        <!-- ESTIMATED METRICS DASHBOARD INSIDE CARD -->
+                        <div class="grid grid-cols-2 gap-3 pt-2">
+                            <div class="bg-slate-900 border border-slate-800 rounded-lg p-3 text-center">
+                                <span
+                                    class="text-[10px] uppercase tracking-wider font-semibold text-slate-400 block mb-0.5">
+                                    Visibilidade Local / Mês
+                                </span>
+                                <span
+                                    class="text-lg font-extrabold text-emerald-400 flex items-center justify-center gap-1">
+                                    <i class="fa-solid fa-eye text-xs"></i> +1.450
+                                </span>
+                                <span class="text-[10px] text-slate-400">pesquisas no Google</span>
+                            </div>
+                            <div class="bg-slate-900 border border-slate-800 rounded-lg p-3 text-center">
+                                <span
+                                    class="text-[10px] uppercase tracking-wider font-semibold text-slate-400 block mb-0.5">
+                                    Resultado Estimado
+                                </span>
+                                <span
+                                    class="text-lg font-extrabold text-emerald-400 flex items-center justify-center gap-1">
+                                    <i class="fa-brands fa-whatsapp text-xs"></i> +85 chamadas
+                                </span>
+                                <span class="text-[10px] text-slate-400">direto no WhatsApp</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- CTA BUTTON DYNAMIC WHATSAPP -->
+                    <div class="mt-6 pt-2">
+                        <a id="btnWhatsappCTA" href="#" target="_blank"
+                            class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold py-3.5 px-6 rounded-xl shadow-lg flex items-center justify-center gap-3 transition-all transform hover:-translate-y-0.5 text-center text-sm sm:text-base">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>GARANTIR MINHA EMPRESA NO TOPO DO GOOGLE</span>
+                        </a>
+                        <p class="text-center text-xs text-slate-400 mt-2">
+                            ⚡ Análise de posicionamento gratuita e sem compromisso em Nova Friburgo.
+                        </p>
+                    </div>
+
                 </div>
             </div>
 
-            <div class="lg:col-span-5">
-                <div
-                    class="bg-cardDark border border-borderDark rounded-2xl p-6 sm:p-7 relative shadow-2xl space-y-5 glow-effect">
+        </div>
 
-                    <!-- Cabeçalho do Card estilo Busca do Google -->
-                    <div class="bg-obsidian/90 border border-slate-800 rounded-xl p-3.5 flex items-center gap-3">
-                        <div
-                            class="w-7 h-7 rounded-lg bg-emeraldNeon/10 text-emeraldNeon flex items-center justify-center text-xs font-bold">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </div>
-                        <div class="flex-1 overflow-hidden">
-                            <div class="text-[10px] text-slate-500 font-semibold uppercase tracking-wider">Busca no
-                                Google</div>
-                            <div class="text-xs font-bold text-white truncate">"Seu Serviço / Comércio em Friburgo"
-                            </div>
-                        </div>
-                        <span class="text-[10px] bg-emeraldNeon/20 text-emeraldNeon px-2 py-0.5 rounded font-bold">#1
-                            Lugar</span>
-                    </div>
+        <!-- SECTION 2: COMPARATIVE "ANTES VS DEPOIS" TOGGLE -->
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-6">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <h3 class="text-2xl font-bold text-white">
+                    A diferença entre ser <span class="text-rose-400">Invisível</span> e ser a <span
+                        class="text-emerald-400">Escolha Nº 1</span>
+                </h3>
+                <p class="text-slate-400 text-sm">
+                    Veja o contraste entre uma empresa sem otimização e um perfil dominando o topo com a assessoria da
+                    Eduardo Fenos Presença Digital.
+                </p>
+            </div>
 
-                    <!-- Preview da Ficha Otimizada no Maps -->
-                    <div
-                        class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 space-y-3 relative overflow-hidden">
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <div class="flex items-center gap-1.5 text-xs font-bold text-white">
-                                    <span>Sua Empresa Otimizada</span>
-                                    <i class="fa-solid fa-circle-check text-emeraldNeon text-[11px]"></i>
-                                </div>
-                                <div class="text-[11px] text-slate-400 mt-0.5">ABERTO AGORA</div>
-                            </div>
-                            <div
-                                class="flex items-center gap-1 text-goldDust font-bold text-xs bg-obsidian px-2 py-1 rounded border border-slate-800">
-                                <span>5.0</span>
-                                <i class="fa-solid fa-star text-[10px]"></i>
-                                <span class="text-slate-500 text-[10px]">(48)</span>
-                            </div>
-                        </div>
-
-                        <!-- Métricas Visuais -->
-                        <div class="grid grid-cols-2 gap-2 pt-2 border-t border-slate-800/80 text-[11px]">
-                            <div class="bg-obsidian/60 p-2 rounded-lg border border-slate-800/60">
-                                <span class="text-slate-400 block text-[9px] uppercase">Buscas Locais:</span>
-                                <span class="font-extrabold text-emeraldNeon text-xs">+1.200 visualizações</span>
-                            </div>
-                            <div class="bg-obsidian/60 p-2 rounded-lg border border-slate-800/60">
-                                <span class="text-slate-400 block text-[9px] uppercase">Resultado Final:</span>
-                                <span class="font-extrabold text-white text-xs">Clicks em clientes</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Chamada de Ação Rápida -->
-                    <div class="space-y-2 pt-1">
-                        <a href="#" id="btn-wa-card" target="_blank"
-                            class="w-full bg-emeraldNeon hover:bg-emeraldHover text-slate-950 font-bold py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 text-xs uppercase tracking-wider shadow-lg shadow-emeraldNeon/20">
-                            <i class="fa-brands fa-whatsapp text-base"></i>
-                            <span>Colocar Minha Empresa Aqui</span>
-                        </a>
-                        <p class="text-[10px] text-slate-400 text-center">Análise de posicionamento gratuita em Nova
-                            Friburgo</p>
-                    </div>
-
+            <!-- TOGGLE BUTTONS -->
+            <div class="flex justify-center">
+                <div class="bg-slate-950 p-1 rounded-xl border border-slate-800 inline-flex">
+                    <button id="btnStateAfter" onclick="setCompareState('after')"
+                        class="px-5 py-2 rounded-lg text-xs font-bold transition-all bg-emerald-500 text-slate-950 shadow-md cursor-pointer">
+                        Perfil Otimizado (Eduardo Fenos)
+                    </button>
+                    <button id="btnStateBefore" onclick="setCompareState('before')"
+                        class="px-5 py-2 rounded-lg text-xs font-bold transition-all text-slate-400 hover:text-white cursor-pointer">
+                        Sem Otimização (Atual)
+                    </button>
                 </div>
+            </div>
+
+            <!-- COMPARATIVE CARD DISPLAY -->
+            <div id="compareDisplayCard"
+                class="max-w-2xl mx-auto bg-slate-950 border border-emerald-500/40 rounded-2xl p-6 space-y-4 transition-all">
+                <!-- Conteúdo gerado dinamicamente via script abaixo -->
             </div>
         </div>
-    </section>
-
+    </main>
     <!-- SEÇÃO DE SERVIÇOS -->
     <section id="servicos" class="py-20 bg-slate-950/80 border-y border-borderDark/60">
         <div class="max-w-7xl mx-auto px-6">
@@ -437,7 +619,111 @@
     <!-- JAVASCRIPT -->
 
     <script>
-        // 1. Templates em HTML para segmentos sem site pronto + URL para massoterapia
+        // --- 1. SIMULADOR INTERATIVO DA HERO (NOVO) ---
+        const inputBusinessName = document.getElementById('inputBusinessName');
+        const inputCategory = document.getElementById('inputCategory');
+        const inputLocation = document.getElementById('inputLocation');
+        const inputSearchTerm = document.getElementById('inputSearchTerm');
+
+        const previewBusinessName = document.getElementById('previewBusinessName');
+        const previewCategory = document.getElementById('previewCategory');
+        const previewLocation = document.getElementById('previewLocation');
+        const previewSearchTerm = document.getElementById('previewSearchTerm');
+        const btnWhatsappCTA = document.getElementById('btnWhatsappCTA');
+
+        function updateSimulation() {
+            if (!inputBusinessName) return; // Proteção caso o elemento não exista na página
+            const name = inputBusinessName.value || "Sua Empresa";
+            const cat = inputCategory.value || "Prestador de Serviços";
+            const loc = inputLocation.value;
+            const search = inputSearchTerm.value || "Serviço em Friburgo";
+
+            if (previewBusinessName) previewBusinessName.textContent = name;
+            if (previewCategory) previewCategory.textContent = cat;
+            if (previewLocation) previewLocation.textContent = loc;
+            if (previewSearchTerm) previewSearchTerm.textContent = search;
+
+            // Pega o número do WhatsApp configurado no input de configuração (ou usa o padrão)
+            const numero = document.getElementById("input-whatsapp")?.value || "5522992469892";
+            const msg = encodeURIComponent(`Olá Eduardo! Fiz uma simulação no seu site para a empresa "${name}" (${cat} em ${loc}) buscando por "${search}" e quero colocar minha empresa no topo do Google.`);
+            if (btnWhatsappCTA) btnWhatsappCTA.href = `https://wa.me/${numero}?text=${msg}`;
+        }
+
+        if (inputBusinessName) {
+            [inputBusinessName, inputCategory, inputLocation, inputSearchTerm].forEach(el => {
+                el.addEventListener('input', updateSimulation);
+                el.addEventListener('change', updateSimulation);
+            });
+        }
+
+        function applyPreset(name, cat, loc, search) {
+            if (inputBusinessName) inputBusinessName.value = name;
+            if (inputCategory) inputCategory.value = cat;
+            if (inputLocation) inputLocation.value = loc;
+            if (inputSearchTerm) inputSearchTerm.value = search;
+            updateSimulation();
+        }
+
+        // Lógica do Comparador Antes vs Depois
+        function setCompareState(state) {
+            const btnAfter = document.getElementById('btnStateAfter');
+            const btnBefore = document.getElementById('btnStateBefore');
+            const card = document.getElementById('compareDisplayCard');
+            if (!card) return;
+
+            if (state === 'after') {
+                if (btnAfter) btnAfter.className = "px-5 py-2 rounded-lg text-xs font-bold transition-all bg-emerald-500 text-slate-950 shadow-md cursor-pointer";
+                if (btnBefore) btnBefore.className = "px-5 py-2 rounded-lg text-xs font-bold transition-all text-slate-400 hover:text-white cursor-pointer";
+                card.className = "max-w-2xl mx-auto bg-slate-950 border border-emerald-500/40 rounded-2xl p-6 space-y-4 transition-all";
+                card.innerHTML = `
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <span class="text-xs font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded">DOMINANDO O TOPO (#1 LUGAR)</span>
+                        <span class="text-xs text-slate-400">Com Eduardo Fenos Presença Digital</span>
+                    </div>
+                    <div class="space-y-3 text-sm text-slate-300">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
+                            <div><strong class="text-white">Aparece primeiro no Google Maps:</strong> Clientes da Região Serrana encontram sua empresa instantaneamente quando buscam pelo seu serviço.</div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
+                            <div><strong class="text-white">Site de Alta Conversão Integrado:</strong> Botão flutuante de WhatsApp e layout feito para transformar visitantes em compradores reais.</div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
+                            <div><strong class="text-white">Autoridade e Confiança 5.0 estrelas:</strong> Perfil completo com fotos profissionais, horário atualizado e dezenas de avaliações positivas.</div>
+                        </div>
+                    </div>
+                `;
+            } else {
+                if (btnBefore) btnBefore.className = "px-5 py-2 rounded-lg text-xs font-bold transition-all bg-rose-500 text-slate-950 shadow-md cursor-pointer";
+                if (btnAfter) btnAfter.className = "px-5 py-2 rounded-lg text-xs font-bold transition-all text-slate-400 hover:text-white cursor-pointer";
+                card.className = "max-w-2xl mx-auto bg-slate-950 border border-rose-500/40 rounded-2xl p-6 space-y-4 transition-all";
+                card.innerHTML = `
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <span class="text-xs font-bold text-rose-400 bg-rose-500/10 px-2.5 py-1 rounded">INVISÍVEL PARA OS CLIENTES</span>
+                        <span class="text-xs text-slate-400">Sem Otimização Local</span>
+                    </div>
+                    <div class="space-y-3 text-sm text-slate-400">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-xmark text-rose-400 mt-1"></i>
+                            <div><strong class="text-slate-200">Perdido na página 3 ou 4:</strong> Ninguém passa do primeiro resultado do mapa; os seus concorrentes levam todos os clientes.</div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-xmark text-rose-400 mt-1"></i>
+                            <div><strong class="text-slate-200">Sem site ou site ultrapassado:</strong> Páginas que demoram a carregar no celular e não geram contato direto via WhatsApp.</div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-xmark text-rose-400 mt-1"></i>
+                            <div><strong class="text-slate-200">Ficha incompleta ou suspensa:</strong> Sem categorias certas, sem fotos reais e sem direcionamento para atrair o público de Friburgo.</div>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+
+        // --- 2. TEMPLATES EM HTML PARA SEGMENTOS (JÁ EXISTENTE) ---
         const caseTemplates = {
             imobiliarias: `<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Imobiliárias & Corretores</title><style>body { font-family: sans-serif; background: #0A0D12; color: #FFF; margin: 0; padding: 30px 20px; text-align: center; } .tag { background: #1E2638; color: #10B981; font-size: 0.7rem; padding: 5px 12px; border-radius: 20px; font-weight: 700; text-transform: uppercase; } h1 { font-size: 1.4rem; margin: 20px 0 10px; color: #FFF; } p { font-size: 0.85rem; color: #94A3B8; line-height: 1.5; margin-bottom: 25px; } .card-offer { background: #121721; border: 1px solid #10B981; border-radius: 16px; padding: 20px; margin-bottom: 20px; } .btn-wa { background: #10B981; color: #0A0D12; padding: 14px 20px; border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 0.85rem; display: block; text-transform: uppercase; }</style></head><body><span class="tag">💡 Oportunidade</span><div class="card-offer"><h1>Seja a Imobiliária / Corretor Destaque Aqui!</h1><p>Sua imobiliária precisa de uma Landing Page com fotos dos seus imóveis e botão direto para corretores no WhatsApp?</p><a href="#" class="btn-wa">Garantir Condição de Primeiro Cliente</a></div><p style="font-size:0.75rem; color:#64748B;">Oferecemos uma condição exclusiva para criar a estrutura digital da primeira imobiliária parceira.</p></body></html>`,
 
@@ -448,24 +734,21 @@
             massoterapia: "https://finafenos-massoterapia-six.vercel.app/"
         };
 
-        // 2. Função inteligente para carregar o site real OU o convite no iframe
+        // --- 3. FUNÇÃO INTELIGENTE PARA CARREGAR O CASE NO IFRAME (JÁ EXISTENTE) ---
         function carregarCase(key) {
             const iframe = document.getElementById("preview-iframe");
             if (!iframe) return;
 
             if (caseUrls[key]) {
-                // Se existir URL externa (Massoterapia)
                 iframe.removeAttribute("srcdoc");
                 if (iframe.src !== new URL(caseUrls[key], window.location.href).href) {
                     iframe.src = caseUrls[key];
                 }
             } else if (caseTemplates[key]) {
-                // Se for Imobiliárias ou Gastronomia, usa o template "Seja nosso primeiro cliente"
                 iframe.removeAttribute("src");
                 iframe.srcdoc = caseTemplates[key];
             }
 
-            // Atualiza o estilo das abas ativas
             const abas = {
                 massoterapia: "tab-massoterapia",
                 imobiliarias: "tab-imobiliarias",
@@ -483,12 +766,11 @@
             });
         }
 
-        // 3. Atualizador Dinâmico de Links do WhatsApp
+        // --- 4. ATUALIZADOR DINÂMICO DE LINKS DO WHATSAPP (JÁ EXISTENTE) ---
         function atualizarDados() {
             const nome = document.getElementById("input-nome-usuario")?.value || "Eduardo Fenos";
             const numero = document.getElementById("input-whatsapp")?.value || "5522992469892";
 
-            // Atualiza nome na tela
             document.querySelectorAll('.display-nome').forEach(el => el.innerText = nome);
 
             const linksWhatsApp = {
@@ -505,9 +787,12 @@
                 const elemento = document.getElementById(id);
                 if (elemento) elemento.href = url;
             });
+
+            // Atualiza também o link do simulador dinâmico se estiver ativo
+            updateSimulation();
         }
 
-        // 4. Alternador de Tela (Celular / Desktop)
+        // --- 5. ALTERNADOR DE TELA / DISPOSITIVO (JÁ EXISTENTE) ---
         function switchDevice(type) {
             const wrapper = document.getElementById("device-wrapper");
             const btnMobile = document.getElementById("btn-device-mobile");
@@ -526,7 +811,7 @@
             }
         }
 
-        // 5. Cálculo do Diagnóstico (0 a 100)
+        // --- 6. CÁLCULO DO DIAGNÓSTICO E AUDITORIA (JÁ EXISTENTE) ---
         function calcularNota() {
             let nota = 0;
             for (let i = 1; i <= 4; i++) {
@@ -538,7 +823,6 @@
             if (elementoNota) elementoNota.innerText = `${nota} / 100`;
         }
 
-        // 6. Envio do relatório formatado para o WhatsApp
         function enviarRelatorioWA() {
             const empresa = document.getElementById("audit-empresa")?.value || "Minha Empresa";
             const bairro = document.getElementById("audit-bairro")?.value || "Nova Friburgo";
@@ -555,10 +839,12 @@
             window.open(`https://wa.me/${numero}?text=${encodeURIComponent(texto)}`, "_blank");
         }
 
-        // 7. Inicialização Segura (Executa assim que o DOM carregar para evitar tela em branco)
+        // --- 7. INICIALIZAÇÃO SEGURA AO CARREGAR A PÁGINA ---
         window.addEventListener('DOMContentLoaded', () => {
             carregarCase("massoterapia");
             atualizarDados();
+            updateSimulation();
+            setCompareState('after'); // Inicializa o comparador no estado otimizado
         });
     </script>
 </body>
