@@ -1,222 +1,920 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR" class="no-js">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduardo Fenos | Presença Digital & Google Negócios em Nova Friburgo</title>
-    <meta name="description" content="Coloque sua empresa no topo do Google Maps e atraia mais clientes diariamente em Nova Friburgo.">
-    <link rel="icon" type="image/png" href="logo-empresa.png">
+    <title>Eduardo Fenos | Sites, Landing Pages e Perfil no Google em Nova Friburgo</title>
+    <meta name="description"
+        content="Desenvolvimento de sites, landing pages e sistemas web sob medida e otimização do Perfil da Empresa no Google para negócios locais de Nova Friburgo/RJ. Fale pelo WhatsApp.">
+    <meta name="google-site-verification" content="Pg8vhV6cSuer0BqyPulakKVmJIih4p84PiERGRzc-PU" />
+    <meta name="author" content="Eduardo Fenos">
+    <meta name="theme-color" content="#151F28">
+    <link rel="canonical" href="https://eduardofenosdev.com.br/">
 
-    <!-- Fonts -->
+    <!-- Open Graph / compartilhamento -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Eduardo Fenos | Presença Digital">
+    <meta property="og:title" content="Eduardo Fenos | Presença Digital e Landing Pages">
+    <meta property="og:description"
+        content="Sites, landing pages, sistemas web e otimização do Perfil da Empresa no Google para negócios locais.">
+    <meta property="og:url" content="https://eduardofenosdev.com.br/">
+    <meta property="og:image" content="https://eduardofenosdev.com.br/assets/img/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Logo Eduardo Fenos — Presença Digital e Landing Pages">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Ícones -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="assets/img/favicon-48.png">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=League+Spartan:wght@500;600;700&display=swap">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brandDark: '#0B0F17',
-                        cardDark: '#131924',
-                        borderDark: '#1E2638',
-                        brandAccent: '#10B981',
-                        brandAccentHover: '#059669',
-                    },
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                    }
-                }
-            }
-        }
+    <link rel="preload" as="image" href="assets/img/logo-header.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <script>document.documentElement.classList.replace('no-js', 'js');</script>
+
+    <!-- Dados estruturados -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Eduardo Fenos | Presença Digital",
+        "url": "https://eduardofenosdev.com.br/",
+        "logo": "https://eduardofenosdev.com.br/assets/img/icon-512.png",
+        "image": "https://eduardofenosdev.com.br/assets/img/og-image.jpg",
+        "description": "Desenvolvimento de sites, landing pages e sistemas web sob medida e otimização do Perfil da Empresa no Google para negócios locais.",
+        "telephone": "+55-22-99246-9892",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Nova Friburgo",
+            "addressRegion": "RJ",
+            "addressCountry": "BR"
+        },
+        "areaServed": { "@type": "City", "name": "Nova Friburgo" },
+        "founder": { "@type": "Person", "name": "Eduardo Fenos" },
+        "sameAs": [
+            "https://www.instagram.com/eduardodev.digital/",
+            "https://github.com/Eduz990"
+        ],
+        "makesOffer": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Desenvolvimento de sites, landing pages e sistemas web" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Otimização do Perfil da Empresa no Google" } }
+        ]
+    }
     </script>
-
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body class="bg-brandDark text-slate-100 font-sans antialiased selection:bg-brandAccent selection:text-slate-950">
+<body>
+    <!-- Ícones reutilizáveis -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <symbol id="i-wa" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+        </symbol>
+        <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <path d="M17.5 6.5h.01" />
+        </symbol>
+        <symbol id="i-gh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" />
+        </symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+        </symbol>
+        <symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" />
+        </symbol>
+        <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12.5l4.5 4.5L19 7.5" />
+        </symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z" />
+            <circle cx="12" cy="9.5" r="2.5" />
+        </symbol>
+        <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z" />
+        </symbol>
+        <symbol id="i-pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19l7-7 3 3-7 7-3-3z" />
+            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+            <path d="M2 2l7.6 7.6" />
+            <circle cx="11" cy="11" r="2" />
+        </symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="2" width="12" height="20" rx="2.5" />
+            <path d="M11 18h2" />
+        </symbol>
+        <symbol id="i-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7" />
+            <path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7" />
+        </symbol>
+        <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            <path d="M9 12l2 2 4-4" />
+        </symbol>
+    </svg>
 
-    <!-- NAVBAR -->
-    <header class="sticky top-0 w-full bg-brandDark/90 backdrop-blur-md border-b border-borderDark/60 z-50">
-        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-3">
-                <img src="logo-empresa.png" alt="Eduardo Fenos" class="w-10 h-10 object-cover rounded-xl border border-borderDark">
-                <div class="flex flex-col">
-                    <span class="font-bold text-base text-white leading-tight">Eduardo Fenos</span>
-                    <span class="text-[11px] text-brandAccent font-medium tracking-wide">Presença Digital Local</span>
-                </div>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- ===================== CABEÇALHO ===================== -->
+    <header class="site-header" id="topo">
+        <div class="container site-header__inner">
+            <a class="brand" href="#inicio" aria-label="Eduardo Fenos — página inicial">
+                <img src="assets/img/logo-header.png" alt="Eduardo Fenos" width="238" height="38">
             </a>
 
-            <a href="https://wa.me/5522992469892?text=Olá%20Eduardo,%20quero%20um%20diagnóstico%20da%20minha%20empresa!" target="_blank"
-                class="inline-flex items-center gap-2 bg-brandAccent hover:bg-brandAccentHover text-slate-950 font-bold px-4 py-2.5 rounded-xl transition-all text-xs uppercase tracking-wider">
-                <i class="fa-brands fa-whatsapp text-sm"></i>
-                <span>Análise Gratuita</span>
-            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu"
+                aria-label="Abrir menu">
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+            </button>
+
+            <nav class="nav" id="menu" aria-label="Navegação principal">
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="#sobre">Sobre</a></li>
+                    <li><a class="nav__link" href="#servicos">Serviços</a></li>
+                    <li><a class="nav__link" href="#projetos">Projetos</a></li>
+                    <li><a class="nav__link" href="#processo">Como trabalho</a></li>
+                    <li><a class="nav__link" href="#duvidas">Dúvidas</a></li>
+                </ul>
+                <a class="btn btn--primary btn--sm nav__cta"
+                    href="https://wa.me/5522992469892?text=Ol%C3%A1%2C%20Eduardo%21%20Vim%20pelo%20seu%20site%20e%20quero%20conversar%20sobre%20a%20presen%C3%A7a%20digital%20da%20minha%20empresa."
+                    target="_blank" rel="noopener">
+                    <svg class="icon" aria-hidden="true"><use href="#i-wa" /></svg>
+                    Fale comigo
+                </a>
+            </nav>
         </div>
     </header>
 
-    <!-- HERO SECTION (FOCO EM OFERTA IRRESISTÍVEL) -->
-    <section class="max-w-4xl mx-auto px-6 py-16 sm:py-24 text-center space-y-8">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brandAccent/10 border border-brandAccent/20 text-brandAccent text-xs font-semibold">
-            <span class="w-2 h-2 rounded-full bg-brandAccent animate-ping"></span>
-            Especialista em Presença Digital Local — Nova Friburgo / RJ
+    <main id="conteudo">
+
+        <!-- ===================== HERO ===================== -->
+        <section class="hero" id="inicio" aria-labelledby="hero-title">
+            <div class="container hero__grid">
+                <div class="hero__content">
+                    <p class="eyebrow" data-reveal>Presença digital · Nova Friburgo, RJ</p>
+
+                    <h1 class="hero__title" id="hero-title" data-reveal style="--d:1">
+                        Seu negócio bem apresentado e fácil de
+                        <span class="sketch"><span class="accent">encontrar</span><svg class="sketch__line"
+                                viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true">
+                                <path pathLength="1" d="M3 11 C 40 5, 90 4, 130 6 S 185 9, 197 5" />
+                            </svg></span>.
+                    </h1>
+
+                    <p class="hero__lead" data-reveal style="--d:2">
+                        Crio <strong>sites, landing pages e sistemas web sob medida</strong> e otimizo o
+                        <strong>Perfil da Empresa no Google</strong> de negócios locais — com atendimento direto,
+                        do primeiro contato à entrega.
+                    </p>
+
+                    <div class="hero__actions" data-reveal style="--d:3">
+                        <a class="btn btn--primary btn--lg"
+                            href="https://wa.me/5522992469892?text=Ol%C3%A1%2C%20Eduardo%21%20Vim%20pelo%20seu%20site%20e%20quero%20conversar%20sobre%20a%20presen%C3%A7a%20digital%20da%20minha%20empresa."
+                            target="_blank" rel="noopener">
+                            <svg class="icon" aria-hidden="true"><use href="#i-wa" /></svg>
+                            Conversar no WhatsApp
+                        </a>
+                        <a class="btn btn--ghost btn--lg" href="#projetos">
+                            Ver projetos
+                            <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow" /></svg>
+                        </a>
+                    </div>
+
+                    <ul class="hero__note" data-reveal style="--d:4">
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-chat" /></svg> Você fala direto comigo</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-phone" /></svg> Projetos pensados para o celular</li>
+                    </ul>
+                </div>
+
+                <!-- Composição: notebook no traço da logo + checklist do Perfil da Empresa -->
+                <div class="hero__visual" aria-hidden="true">
+                    <div class="laptop">
+                        <svg class="laptop__art" viewBox="0 0 560 400">
+                            <path class="l-thick" pathLength="1"
+                                d="M70 22 C 180 18, 330 16, 486 20 C 492 110, 494 200, 490 290 C 340 294, 200 290, 72 293 C 66 200, 68 110, 70 22 Z" />
+                            <path class="l-thin" pathLength="1"
+                                d="M86 36 C 200 34, 360 35, 476 36 C 477 120, 476 200, 476 277 C 350 279, 210 276, 87 278 C 86 200, 85 110, 86 36 Z" />
+                            <path class="l-thick" pathLength="1" d="M72 293 L 14 362 C 200 364, 380 362, 548 364 L 490 290" />
+                            <path class="l-thick" pathLength="1"
+                                d="M14 362 C 13 370, 14 376, 16 380 C 200 382, 380 381, 546 382 C 548 376, 548 370, 548 364" />
+                            <path class="l-thin" pathLength="1" d="M100 300 L 462 300 L 488 338 L 74 338 Z" />
+                            <path class="l-thin" pathLength="1" d="M90 312 L 471 312 M82 325 L 480 325" />
+                            <path class="l-thin" pathLength="1"
+                                d="M126 300L104 338M152 300L133 338M178 300L163 338M203 300L192 338M229 300L222 338M255 300L251 338M281 300L281 338M307 300L311 338M333 300L340 338M359 300L370 338M384 300L399 338M410 300L429 338M436 300L458 338" />
+                            <path class="l-thin" pathLength="1" d="M232 344 L 328 344 L 331 359 L 229 359 Z" />
+                        </svg>
+
+                        <div class="screen">
+                            <div class="screen__bar" data-build style="--i:0">
+                                <span class="screen__logo"></span>
+                                <span class="screen__links"><span></span><span></span><span></span></span>
+                            </div>
+                            <div class="screen__body">
+                                <div class="screen__copy">
+                                    <span class="screen__kicker" data-build style="--i:1">Seu negócio</span>
+                                    <span class="screen__title" data-build style="--i:2">Atendimento que começa no celular</span>
+                                    <span class="screen__text" data-build style="--i:3"><span></span><span></span></span>
+                                    <span class="screen__btn" data-build style="--i:4">
+                                        <svg class="icon"><use href="#i-wa" /></svg> Chamar no WhatsApp
+                                    </span>
+                                </div>
+                                <div class="screen__media" data-build style="--i:5"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <div class="profile-card__head">
+                            <p class="profile-card__title">Perfil da Empresa
+                                <span class="profile-card__sub">Itens revisados na otimização</span>
+                            </p>
+                            <span class="profile-card__pin"><svg class="icon icon--stroke"><use href="#i-pin" /></svg></span>
+                        </div>
+                        <ul class="profile-card__list" data-checklist>
+                            <li><span class="check"><svg><use href="#i-check" /></svg></span>Categoria principal</li>
+                            <li><span class="check"><svg><use href="#i-check" /></svg></span>Horário de funcionamento</li>
+                            <li><span class="check"><svg><use href="#i-check" /></svg></span>Serviços cadastrados</li>
+                            <li><span class="check"><svg><use href="#i-check" /></svg></span>Fotos do ambiente</li>
+                            <li><span class="check"><svg><use href="#i-check" /></svg></span>Avaliações respondidas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="capabilities">
+            <div class="container">
+                <ul class="capabilities__list" aria-label="O que eu desenvolvo">
+                    <li>Sites institucionais</li>
+                    <li>Landing pages</li>
+                    <li>Portfólios comerciais</li>
+                    <li>Sistemas web</li>
+                    <li>Perfil da Empresa no Google</li>
+                </ul>
+            </div>
         </div>
 
-        <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
-            Sua empresa está <span class="text-rose-500 underline decoration-rose-500/30">perdendo clientes</span> no Google para os concorrentes?
-        </h1>
+        <!-- ===================== SOBRE ===================== -->
+        <section class="section" id="sobre" aria-labelledby="sobre-title">
+            <div class="container about">
+                <div class="about__media" data-reveal>
+                    <div class="about__photo">
+                        <img src="assets/img/eduardo-fenos.webp" alt="Retrato de Eduardo Fenos sorrindo, de camisa branca e gravata"
+                            width="560" height="700" loading="lazy" decoding="async">
+                    </div>
+                    <span class="about__frame" aria-hidden="true"></span>
+                    <span class="about__tag">
+                        <svg class="icon icon--stroke" aria-hidden="true"><use href="#i-pin" /></svg>
+                        Nova Friburgo · RJ
+                    </span>
+                </div>
 
-        <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            Quando alguém pesquisa pelo seu serviço no bairro ou cidade, sua empresa aparece nas primeiras posições ou fica invisível? Posiciono seu perfil no Google Maps e crio sites focados em gerar chamadas no seu WhatsApp.
-        </p>
+                <div class="about__content">
+                    <p class="eyebrow" data-reveal>Sobre</p>
+                    <h2 class="about__title" id="sobre-title" data-reveal>Prazer, sou o Eduardo.</h2>
 
-        <!-- CAIXA DE AÇÃO DIRETA -->
-        <div class="pt-4 max-w-lg mx-auto bg-cardDark border border-borderDark p-6 rounded-2xl space-y-4">
-            <h3 class="text-sm font-bold text-white flex items-center justify-center gap-2">
-                <i class="fa-solid fa-magnifying-glass-chart text-brandAccent"></i>
-                Receba um Diagnóstico Gratuito do Seu Negócio
-            </h3>
-            <p class="text-xs text-slate-400">
-                Me envie o nome da sua empresa no WhatsApp. Eu analiso como seu perfil está hoje e te envio o que precisa ser ajustado.
-            </p>
-            <a href="https://wa.me/5522992469892?text=Olá%20Eduardo,%20quero%20o%20diagnóstico%20gratuito%20da%20minha%20empresa!" target="_blank"
-                class="w-full bg-brandAccent hover:bg-brandAccentHover text-slate-950 font-extrabold py-3.5 rounded-xl shadow-lg shadow-brandAccent/20 transition-all text-sm flex items-center justify-center gap-2 block">
-                <i class="fa-brands fa-whatsapp text-lg"></i>
-                <span>Solicitar Análise no WhatsApp</span>
-            </a>
-        </div>
-    </section>
+                    <div class="about__text" data-reveal>
+                        <p>
+                            Sou desenvolvedor web e cuido da <strong>presença digital de pequenos e médios
+                                negócios</strong>: o site que apresenta a empresa e o perfil que faz ela aparecer quando
+                            alguém pesquisa no Google.
+                        </p>
+                        <p>
+                            O trabalho começa entendendo como o seu negócio funciona e como os clientes chegam até
+                            você. A partir disso, organizo as informações, desenho as páginas e desenvolvo tudo com
+                            atenção à velocidade, à leitura no celular e à facilidade de contato.
+                        </p>
+                        <p>
+                            Você acompanha cada etapa e conversa diretamente comigo — sem intermediários e sem
+                            linguagem técnica desnecessária.
+                        </p>
+                        <!-- EDITAR: se quiser, acrescente aqui sua formação, tempo de atuação ou certificações. -->
+                    </div>
 
-    <!-- O QUE ACONTECE QUANDO VOCÊ NÃO ESTÁ NO TOPO (DOR DO CLIENTE) -->
-    <section class="py-12 bg-cardDark/30 border-y border-borderDark/60">
-        <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
-            <div class="space-y-4">
-                <span class="text-xs font-bold uppercase tracking-widest text-rose-400">O Problema</span>
-                <h2 class="text-2xl font-bold text-white">Por que você está deixando dinheiro na mesa?</h2>
-                <p class="text-xs text-slate-400 leading-relaxed">
-                    Mais de 80% das pessoas em Nova Friburgo pesquisam no Google antes de ir até uma loja, clínica, restaurante ou contratar um serviço. Se você não aparece no Top 3 do Google Maps, o cliente simplesmente clica no seu concorrente mais próximo.
+                    <ul class="principles" data-reveal>
+                        <li>
+                            <span class="principles__k">01</span>
+                            <span class="principles__t">Escuta primeiro</span>
+                            <span class="principles__d">O projeto parte do seu negócio, não de um modelo pronto.</span>
+                        </li>
+                        <li>
+                            <span class="principles__k">02</span>
+                            <span class="principles__t">Clareza</span>
+                            <span class="principles__d">Textos diretos e páginas que mostram o que importa ao cliente.</span>
+                        </li>
+                        <li>
+                            <span class="principles__k">03</span>
+                            <span class="principles__t">Contato fácil</span>
+                            <span class="principles__d">WhatsApp e informações essenciais sempre à vista.</span>
+                        </li>
+                    </ul>
+
+                    <a class="link-arrow" href="https://www.instagram.com/eduardodev.digital/" target="_blank"
+                        rel="noopener" data-reveal>
+                        <svg class="icon" aria-hidden="true"><use href="#i-ig" /></svg>
+                        Acompanhe meu trabalho no Instagram
+                        <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow" /></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SERVIÇOS ===================== -->
+        <section class="section section--deep" id="servicos" aria-labelledby="servicos-title">
+            <div class="container">
+                <header class="section-head">
+                    <p class="eyebrow" data-reveal>Serviços</p>
+                    <h2 class="section-title" id="servicos-title" data-reveal>
+                        Duas frentes, um objetivo: sua empresa bem representada na internet.
+                    </h2>
+                    <p class="section-lead" data-reveal>
+                        Os serviços podem ser contratados separadamente ou em conjunto, para que site e Google
+                        mostrem as mesmas informações sobre o seu negócio.
+                    </p>
+                </header>
+
+                <!-- Serviço 01 -->
+                <article class="service" id="desenvolvimento-web" aria-labelledby="web-title">
+                    <div class="service__meta" data-reveal>
+                        <span class="service__num">01 / Desenvolvimento</span>
+                        <h3 class="service__title" id="web-title">Desenvolvimento web e sistemas</h3>
+                        <p class="service__desc">
+                            Sites, landing pages, portfólios comerciais e sistemas web feitos sob medida — do
+                            planejamento à publicação.
+                        </p>
+                        <div class="service__actions">
+                            <a class="btn btn--primary"
+                                href="https://wa.me/5522992469892?text=Ol%C3%A1%2C%20Eduardo%21%20Tenho%20interesse%20em%20um%20site%20ou%20landing%20page%20para%20o%20meu%20neg%C3%B3cio.%20Podemos%20conversar%3F"
+                                target="_blank" rel="noopener">
+                                <svg class="icon" aria-hidden="true"><use href="#i-wa" /></svg>
+                                Pedir orçamento de site
+                            </a>
+                            <a class="link-arrow"
+                                href="https://wa.me/5522992469892?text=Ol%C3%A1%2C%20Eduardo%21%20Preciso%20de%20um%20sistema%20web%20sob%20medida%20para%20a%20minha%20empresa.%20Podemos%20conversar%3F"
+                                target="_blank" rel="noopener">
+                                Preciso de um sistema
+                                <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow" /></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="service__body">
+                        <div data-reveal>
+                            <p class="label">O que pode ser desenvolvido</p>
+                            <ul class="deliverables">
+                                <li>
+                                    <h4>Site institucional</h4>
+                                    <p>Apresenta a empresa, os serviços, a localização e as formas de contato em um
+                                        endereço próprio.</p>
+                                </li>
+                                <li>
+                                    <h4>Landing page</h4>
+                                    <p>Uma página focada em um serviço ou campanha, com um caminho claro até o contato.
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4>Portfólio comercial</h4>
+                                    <p>Mostra trabalhos, fotos e diferenciais de quem vende o próprio serviço.</p>
+                                </li>
+                                <li>
+                                    <h4>Sistema web personalizado</h4>
+                                    <p>Ferramentas sob medida para organizar a rotina, como cadastros, agendamentos,
+                                        controles e relatórios.</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="why" data-reveal>
+                            <h4 class="why__title">Por que isso importa</h4>
+                            <p>
+                                Um site bem feito é o lugar onde o cliente confirma que pode confiar em você. Ele
+                                reúne o que você oferece em um endereço que pode ser compartilhado nas redes sociais,
+                                no Google e no WhatsApp — e continua apresentando o seu negócio mesmo fora do horário
+                                de atendimento.
+                            </p>
+                        </div>
+
+                        <div data-reveal>
+                            <p class="label">Cuidados em todo projeto</p>
+                            <ul class="care">
+                                <li><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-check" /></svg>Layout pensado primeiro para o celular</li>
+                                <li><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-check" /></svg>Botões de contato direto pelo WhatsApp</li>
+                                <li><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-check" /></svg>Títulos, descrição e estrutura organizados para buscadores</li>
+                                <li><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-check" /></svg>Imagens otimizadas para carregar rápido</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Serviço 02 -->
+                <article class="service" id="perfil-google" aria-labelledby="google-title">
+                    <div class="service__meta" data-reveal>
+                        <span class="service__num">02 / Presença local</span>
+                        <h3 class="service__title" id="google-title">Perfil da Empresa no Google</h3>
+                        <p class="service__desc">
+                            Otimização orgânica do perfil que aparece na Busca e no Google Maps — o antigo Google
+                            Meu Negócio — para que sua empresa seja apresentada de forma completa e confiável.
+                        </p>
+                        <div class="service__actions">
+                            <a class="btn btn--primary"
+                                href="https://wa.me/5522992469892?text=Ol%C3%A1%2C%20Eduardo%21%20Quero%20melhorar%20o%20Perfil%20da%20minha%20empresa%20no%20Google.%20Podemos%20conversar%3F"
+                                target="_blank" rel="noopener">
+                                <svg class="icon" aria-hidden="true"><use href="#i-wa" /></svg>
+                                Quero melhorar meu perfil
+                            </a>
+                            <a class="link-arrow"
+                                href="https://wa.me/5522992469892?text=Ol%C3%A1%2C%20Eduardo%21%20Quero%20uma%20an%C3%A1lise%20gratuita%20do%20Perfil%20da%20minha%20empresa%20no%20Google.%20O%20nome%20da%20empresa%20%C3%A9%3A%20"
+                                target="_blank" rel="noopener">
+                                Pedir análise gratuita
+                                <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow" /></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="service__body">
+                        <div data-reveal>
+                            <p class="label">O que é revisado e organizado</p>
+                            <ul class="deliverables">
+                                <li>
+                                    <h4>Informações comerciais</h4>
+                                    <p>Nome, endereço, telefone, horários e site corretos e consistentes.</p>
+                                </li>
+                                <li>
+                                    <h4>Categorias</h4>
+                                    <p>Categoria principal e secundárias que descrevem com precisão o que você faz.</p>
+                                </li>
+                                <li>
+                                    <h4>Serviços e produtos</h4>
+                                    <p>Cadastro claro do que você oferece, para o cliente entender antes mesmo de
+                                        ligar.</p>
+                                </li>
+                                <li>
+                                    <h4>Fotos e descrição</h4>
+                                    <p>Orientação sobre fotos reais da fachada, do ambiente e do trabalho, e um texto
+                                        objetivo sobre o negócio.</p>
+                                </li>
+                                <li>
+                                    <h4>Avaliações</h4>
+                                    <p>Uma rotina para pedir avaliações a clientes reais e responder a cada uma com
+                                        profissionalismo.</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="why" data-reveal>
+                            <h4 class="why__title">Por que isso importa</h4>
+                            <p>
+                                Quando alguém procura um serviço na própria cidade, o perfil da empresa costuma ser uma
+                                das primeiras coisas que aparecem. Informações desatualizadas, poucas fotos ou
+                                avaliações sem resposta passam impressão de descuido — e o cliente segue para a próxima
+                                opção.
+                            </p>
+                        </div>
+
+                        <div class="honest" data-reveal>
+                            <span class="honest__icon"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-shield" /></svg></span>
+                            <div>
+                                <h4>Sem promessas que ninguém pode cumprir</h4>
+                                <p>
+                                    O Google define a ordem dos resultados com base em fatores como relevância,
+                                    distância e destaque do negócio. Por isso, não prometo posição garantida,
+                                    resultado imediato nem avaliações artificiais. O que entrego é um perfil
+                                    completo, correto e bem cuidado — a base para sua empresa ser encontrada por quem
+                                    procura o que você oferece.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===================== PROJETOS ===================== -->
+        <section class="section" id="projetos" aria-labelledby="projetos-title">
+            <div class="container">
+                <header class="section-head">
+                    <p class="eyebrow" data-reveal>Projetos</p>
+                    <h2 class="section-title" id="projetos-title" data-reveal>
+                        Trabalhos publicados, sistemas em construção e estudos de layout.
+                    </h2>
+                    <p class="section-lead" data-reveal>
+                        Cada projeto está identificado conforme o seu estágio: publicado, em desenvolvimento ou
+                        demonstração conceitual.
+                    </p>
+                </header>
+
+                <!-- Projeto em destaque -->
+                <article class="feature" aria-labelledby="finafenos-title">
+                    <div class="devices" data-reveal>
+                        <div class="browser">
+                            <div class="browser__bar" aria-hidden="true">
+                                <span class="browser__dots"><span></span><span></span><span></span></span>
+                                <span class="browser__url">finafenos-massoterapia-six.vercel.app</span>
+                            </div>
+                            <img src="assets/img/projeto-finafenos-desktop.webp"
+                                alt="Página inicial do site FinaFenos Clinic & Massoterapia no computador, com título, botão de agendamento pelo WhatsApp e foto da massoterapeuta"
+                                width="1440" height="900" loading="lazy" decoding="async">
+                        </div>
+                        <div class="phone">
+                            <img src="assets/img/projeto-finafenos-mobile.webp"
+                                alt="Versão para celular do site FinaFenos, com botão de agendamento em destaque"
+                                width="390" height="844" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+
+                    <div class="feature__content" data-reveal>
+                        <div class="feature__top">
+                            <span class="status status--live">Projeto real · No ar</span>
+                            <span class="feature__type">Landing page · Olaria, Nova Friburgo</span>
+                        </div>
+                        <h3 class="feature__title" id="finafenos-title">FinaFenos Clinic &amp; Massoterapia</h3>
+                        <dl class="case">
+                            <div>
+                                <dt>Desafio</dt>
+                                <dd>Uma clínica de massoterapia precisava apresentar seus serviços, o convênio para
+                                    empresas e a localização em um só lugar, facilitando o agendamento.</dd>
+                            </div>
+                            <div>
+                                <dt>Solução</dt>
+                                <dd>Landing page com seções de serviços, atendimento para empresas, localização e
+                                    dúvidas frequentes, botões de agendamento pelo WhatsApp e metadados voltados à
+                                    busca local.</dd>
+                            </div>
+                        </dl>
+                        <ul class="tags" aria-label="Tecnologias e recursos">
+                            <li>Landing page</li>
+                            <li>SEO local</li>
+                            <li>Agendamento via WhatsApp</li>
+                            <li>Responsivo</li>
+                        </ul>
+                        <div>
+                            <a class="btn btn--ghost" href="https://finafenos-massoterapia-six.vercel.app/"
+                                target="_blank" rel="noopener">
+                                Visitar o site
+                                <svg class="icon icon--stroke" aria-hidden="true"><use href="#i-ext" /></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Outros projetos -->
+                <div class="projects-more">
+                    <article class="project project--wide" data-reveal aria-labelledby="leao-title">
+                        <div class="project__preview">
+                            <div class="terminal" aria-hidden="true">
+                                <div class="terminal__bar"><span></span><span></span><span></span></div>
+                                <p class="t-dim"># src/mapping/regras.py</p>
+                                <p>REGRAS = {</p>
+                                <p>&nbsp;&nbsp;"32172": {</p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;"descricao": "Condomínio",</p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;"codigo_carne_leao": "P10.01.00003"</p>
+                                <p>&nbsp;&nbsp;},</p>
+                                <p class="t-cmd">python src/main.py</p>
+                                <p class="t-head">ANÁLISE DAS REGRAS</p>
+                                <p>32172 | Condomínio | A | P10.01.00003</p>
+                            </div>
+                        </div>
+                        <div class="project__body">
+                            <span class="status status--dev">Em desenvolvimento</span>
+                            <h3 class="project__title" id="leao-title">Leão Connect</h3>
+                            <p class="project__desc">
+                                Ferramenta em Python que importa lotes de lançamentos contábeis (TXT e Excel) e aplica
+                                regras de mapeamento para organizar a classificação no Carnê-Leão.
+                            </p>
+                            <ul class="tags" aria-label="Tecnologias">
+                                <li>Python</li>
+                                <li>pandas</li>
+                                <li>Automação</li>
+                            </ul>
+                        </div>
+                        <div class="project__foot">
+                            <a class="link-arrow" href="https://github.com/Eduz990/leao-Connect" target="_blank"
+                                rel="noopener">
+                                <svg class="icon icon--stroke" aria-hidden="true"><use href="#i-gh" /></svg>
+                                Ver código no GitHub
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project" data-reveal style="--d:1" aria-labelledby="food-title">
+                        <div class="project__preview">
+                            <div class="mock mock--food" aria-hidden="true">
+                                <div class="mock__bar">
+                                    <span class="mock__brand">Seu restaurante</span>
+                                    <span class="mock__pill">Cardápio</span>
+                                </div>
+                                <div class="mock__menu">
+                                    <div class="mock__item"><i></i><span><b>Prato da casa</b><small>Almoço</small></span><span class="mock__price">Pedir</span></div>
+                                    <div class="mock__item"><i></i><span><b>Salada fresca</b><small>Leves</small></span><span class="mock__price">Pedir</span></div>
+                                    <div class="mock__item"><i></i><span><b>Grelhado</b><small>Pratos</small></span><span class="mock__price">Pedir</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project__body">
+                            <span class="status status--concept">Demonstração conceitual</span>
+                            <h3 class="project__title" id="food-title">Cardápio online com pedido pelo WhatsApp</h3>
+                            <p class="project__desc">
+                                Estudo de página para restaurantes e lanchonetes: cardápio por categorias, fotos dos
+                                pratos e pedido direto na conversa.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project" data-reveal style="--d:2" aria-labelledby="home-title">
+                        <div class="project__preview">
+                            <div class="mock mock--home" aria-hidden="true">
+                                <div class="mock__bar">
+                                    <span class="mock__brand">Sua imobiliária</span>
+                                    <span class="mock__pill">Falar com corretor</span>
+                                </div>
+                                <div class="mock__homes">
+                                    <div class="mock__home"><i></i><span><b>Casa · 3 quartos</b><small>Com quintal</small></span></div>
+                                    <div class="mock__home"><i></i><span><b>Apartamento · 2 quartos</b><small>Com garagem</small></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project__body">
+                            <span class="status status--concept">Demonstração conceitual</span>
+                            <h3 class="project__title" id="home-title">Vitrine de imóveis com contato do corretor</h3>
+                            <p class="project__desc">
+                                Estudo para corretores e imobiliárias: imóveis em destaque com fotos, características
+                                e um botão para falar com o responsável.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="concept-note" data-reveal>
+                    <p>
+                        As demonstrações conceituais mostram possibilidades de layout para segmentos locais e não
+                        representam clientes reais. Quer ver como uma página assim ficaria para o seu negócio?
+                    </p>
+                    <a class="btn btn--ghost"
+                        href="https://wa.me/5522992469892?text=Ol%C3%A1%2C%20Eduardo%21%20Vi%20as%20demonstra%C3%A7%C3%B5es%20do%20seu%20portf%C3%B3lio%20e%20quero%20algo%20parecido%20para%20o%20meu%20segmento."
+                        target="_blank" rel="noopener">
+                        <svg class="icon" aria-hidden="true"><use href="#i-wa" /></svg>
+                        Conversar sobre meu segmento
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== DIFERENCIAIS E PROCESSO ===================== -->
+        <section class="section section--paper" id="processo" aria-labelledby="diferenciais-title">
+            <div class="container">
+                <header class="section-head">
+                    <p class="eyebrow" data-reveal>Por que trabalhar comigo</p>
+                    <h2 class="section-title" id="diferenciais-title" data-reveal>
+                        Diferenciais que você percebe durante o projeto — não só na entrega.
+                    </h2>
+                </header>
+
+                <ul class="values">
+                    <li class="value" data-reveal>
+                        <span class="value__icon"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-chat" /></svg></span>
+                        <h3>Atendimento direto</h3>
+                        <p>Você conversa com quem planeja e desenvolve. As decisões andam mais rápido e nenhuma
+                            informação se perde no caminho.</p>
+                    </li>
+                    <li class="value" data-reveal style="--d:1">
+                        <span class="value__icon"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-pen" /></svg></span>
+                        <h3>Feito para o seu negócio</h3>
+                        <p>Estrutura, textos e seções definidos a partir do seu público e dos seus serviços — e não
+                            de um modelo genérico.</p>
+                    </li>
+                    <li class="value" data-reveal>
+                        <span class="value__icon"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-phone" /></svg></span>
+                        <h3>Experiência no celular</h3>
+                        <p>Muitos clientes vão conhecer sua empresa pelo smartphone. Cada tela é pensada para ler
+                            com conforto e tocar sem errar.</p>
+                    </li>
+                    <li class="value" data-reveal style="--d:1">
+                        <span class="value__icon"><svg class="icon icon--stroke" aria-hidden="true"><use href="#i-link" /></svg></span>
+                        <h3>Site e Google alinhados</h3>
+                        <p>Informações iguais no site e no Perfil da Empresa transmitem segurança a quem pesquisa e
+                            evitam desencontros.</p>
+                    </li>
+                </ul>
+
+                <div class="process">
+                    <div class="process__head">
+                        <div class="section-head" style="margin-bottom:0">
+                            <p class="eyebrow" data-reveal>Como trabalho</p>
+                            <h2 class="process__title" data-reveal>Do primeiro contato à publicação, em cinco etapas.</h2>
+                        </div>
+                        <a class="btn btn--ghost" data-reveal
+                            href="https://wa.me/5522992469892?text=Ol%C3%A1%2C%20Eduardo%21%20Quero%20conversar%20sobre%20o%20meu%20projeto."
+                            target="_blank" rel="noopener">
+                            Começar pela conversa
+                            <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow" /></svg>
+                        </a>
+                    </div>
+
+                    <ol class="steps">
+                        <li class="step" data-reveal>
+                            <span class="step__num">01</span>
+                            <h3>Conversa</h3>
+                            <p>Entendo seu negócio, seu público e o que você precisa resolver agora.</p>
+                        </li>
+                        <li class="step" data-reveal style="--d:1">
+                            <span class="step__num">02</span>
+                            <h3>Proposta</h3>
+                            <p>Definimos juntos o escopo, o prazo e o investimento antes de começar.</p>
+                        </li>
+                        <li class="step" data-reveal style="--d:2">
+                            <span class="step__num">03</span>
+                            <h3>Criação</h3>
+                            <p>Organizo os conteúdos, desenho as páginas ou ajusto o perfil e desenvolvo tudo.</p>
+                        </li>
+                        <li class="step" data-reveal style="--d:3">
+                            <span class="step__num">04</span>
+                            <h3>Revisão</h3>
+                            <p>Você analisa o resultado e aponta ajustes; refinamos os detalhes juntos.</p>
+                        </li>
+                        <li class="step" data-reveal style="--d:4">
+                            <span class="step__num">05</span>
+                            <h3>Publicação</h3>
+                            <p>Coloco no ar, confiro links e botões de contato e explico como tudo funciona.</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== DÚVIDAS ===================== -->
+        <section class="section section--deep" id="duvidas" aria-labelledby="duvidas-title">
+            <div class="container faq">
+                <header class="section-head">
+                    <p class="eyebrow" data-reveal>Dúvidas frequentes</p>
+                    <h2 class="section-title" id="duvidas-title" data-reveal>Antes de conversarmos.</h2>
+                    <p class="section-lead" data-reveal>
+                        Não encontrou sua pergunta? Me chame no WhatsApp e eu respondo pessoalmente.
+                    </p>
+                </header>
+
+                <div class="faq__list" data-reveal>
+                    <details class="faq__item">
+                        <summary>Você garante a primeira posição no Google?<span class="faq__toggle" aria-hidden="true"></span></summary>
+                        <p class="faq__answer">
+                            Não. A ordem dos resultados é definida pelo próprio Google e considera fatores como
+                            relevância, distância de quem pesquisa e destaque do negócio. O meu trabalho é deixar seu
+                            perfil completo, correto e bem apresentado, o que melhora as condições de a sua empresa
+                            ser encontrada.
+                        </p>
+                    </details>
+                    <details class="faq__item">
+                        <summary>Preciso pagar todo mês?<span class="faq__toggle" aria-hidden="true"></span></summary>
+                        <p class="faq__answer">
+                            Não há fidelidade obrigatória. A criação do site ou a estruturação do perfil pode ser feita
+                            com pagamento único e, se você quiser, existe a opção de acompanhamento mensal.
+                        </p>
+                    </details>
+                    <details class="faq__item">
+                        <summary>Quanto tempo leva para o site ficar pronto?<span class="faq__toggle" aria-hidden="true"></span></summary>
+                        <p class="faq__answer">
+                            Depende do tamanho do projeto e de quando os textos e fotos ficam disponíveis. O prazo é
+                            combinado na proposta, antes de começarmos, para você se planejar.
+                        </p>
+                    </details>
+                    <details class="faq__item">
+                        <summary>Você cria avaliações para a minha empresa?<span class="faq__toggle" aria-hidden="true"></span></summary>
+                        <p class="faq__answer">
+                            Não. Avaliações precisam vir de clientes reais. O que faço é ajudar você a criar uma
+                            rotina para pedir avaliações a quem foi atendido e a responder a cada uma de forma
+                            profissional.
+                        </p>
+                    </details>
+                    <details class="faq__item">
+                        <summary>Já tenho Instagram. Por que ter um site?<span class="faq__toggle" aria-hidden="true"></span></summary>
+                        <p class="faq__answer">
+                            As redes sociais são ótimas para mostrar o dia a dia, mas o site é um endereço seu: reúne
+                            serviços, localização e contato de forma organizada, pode aparecer nas buscas do Google e
+                            não depende das regras de uma plataforma.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== CTA FINAL ===================== -->
+        <section class="cta" id="contato" aria-labelledby="contato-title">
+            <div class="container cta__inner">
+                <img class="cta__mark" src="assets/img/logo-mark.png" alt="" width="333" height="240" loading="lazy"
+                    data-reveal>
+                <h2 class="cta__title" id="contato-title" data-reveal>
+                    Vamos
+                    <span class="sketch">conversar<svg class="sketch__line" viewBox="0 0 200 16"
+                            preserveAspectRatio="none" aria-hidden="true">
+                            <path pathLength="1" d="M3 9 C 50 4, 100 5, 140 7 S 186 10, 197 6" />
+                        </svg></span>
+                    sobre o seu negócio?
+                </h2>
+                <p class="cta__lead" data-reveal>
+                    Conte o que você precisa — um site novo, uma landing page, um sistema ou um perfil no Google mais
+                    bem cuidado. A primeira conversa serve para entender o seu caso, sem compromisso.
+                </p>
+                <div class="cta__actions" data-reveal>
+                    <a class="btn btn--primary btn--lg"
+                        href="https://wa.me/5522992469892?text=Ol%C3%A1%2C%20Eduardo%21%20Quero%20conversar%20sobre%20o%20meu%20projeto."
+                        target="_blank" rel="noopener">
+                        <svg class="icon" aria-hidden="true"><use href="#i-wa" /></svg>
+                        Chamar no WhatsApp
+                    </a>
+                    <a class="btn btn--ghost btn--lg" href="https://www.instagram.com/eduardodev.digital/"
+                        target="_blank" rel="noopener">
+                        <svg class="icon" aria-hidden="true"><use href="#i-ig" /></svg>
+                        Ver o Instagram
+                    </a>
+                </div>
+                <p class="cta__contact" data-reveal>
+                    <a href="https://wa.me/5522992469892" target="_blank" rel="noopener">(22) 99246-9892</a>
+                    <a href="https://www.instagram.com/eduardodev.digital/" target="_blank" rel="noopener">@eduardodev.digital</a>
+                    <span>Nova Friburgo · RJ</span>
                 </p>
             </div>
-            <div class="space-y-3">
-                <div class="p-3.5 rounded-xl bg-cardDark border border-borderDark text-xs text-slate-300 flex items-center gap-3">
-                    <span>Perfil no Google desatualizado ou sem fotos profissionais</span>
+        </section>
+    </main>
+
+    <!-- ===================== RODAPÉ ===================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <img src="assets/img/logo-eduardo-fenos.png"
+                        alt="Eduardo Fenos — Presença Digital e Landing Pages" width="820" height="137" loading="lazy">
+                    <p>Sites, landing pages, sistemas web e otimização do Perfil da Empresa no Google para negócios
+                        locais.</p>
                 </div>
-                <div class="p-3.5 rounded-xl bg-cardDark border border-borderDark text-xs text-slate-300 flex items-center gap-3">
-                    <span>Poucas avaliações ou comentários sem resposta</span>
+
+                <nav aria-label="Atalhos do rodapé">
+                    <p class="footer__title">Navegação</p>
+                    <ul class="footer__links">
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#processo">Como trabalho</a></li>
+                        <li><a href="#duvidas">Dúvidas</a></li>
+                    </ul>
+                </nav>
+
+                <div>
+                    <p class="footer__title">Serviços</p>
+                    <ul class="footer__links">
+                        <li><a href="#desenvolvimento-web">Sites e landing pages</a></li>
+                        <li><a href="#desenvolvimento-web">Sistemas web</a></li>
+                        <li><a href="#perfil-google">Perfil da Empresa no Google</a></li>
+                    </ul>
                 </div>
-                <div class="p-3.5 rounded-xl bg-cardDark border border-borderDark text-xs text-slate-300 flex items-center gap-3">
-                    <span>Sem site para apresentar os serviços de forma rápida</span>
+
+                <div>
+                    <p class="footer__title">Contato</p>
+                    <ul class="footer__links">
+                        <li>
+                            <a href="https://wa.me/5522992469892?text=Ol%C3%A1%2C%20Eduardo%21%20Vim%20pelo%20seu%20site."
+                                target="_blank" rel="noopener">
+                                <svg class="icon" aria-hidden="true"><use href="#i-wa" /></svg> WhatsApp
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/eduardodev.digital/" target="_blank" rel="noopener">
+                                <svg class="icon" aria-hidden="true"><use href="#i-ig" /></svg> Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Eduz990" target="_blank" rel="noopener">
+                                <svg class="icon" aria-hidden="true"><use href="#i-gh" /></svg> GitHub
+                            </a>
+                        </li>
+                    </ul>
                 </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>© <span data-year>2026</span> Eduardo Fenos | Presença Digital · Nova Friburgo, RJ</p>
+                <a href="#inicio">Voltar ao topo ↑</a>
             </div>
         </div>
-    </section>
-
-    <!-- SEÇÃO DE SERVIÇOS -->
-    <section id="servicos" class="py-20">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
-                <span class="text-xs font-bold uppercase tracking-widest text-brandAccent">Soluções em Vendas</span>
-                <h2 class="text-2xl sm:text-3xl font-bold text-white">Como podemos estruturar sua empresa</h2>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                
-                <!-- Card 1 -->
-                <div class="bg-cardDark border border-borderDark rounded-2xl p-8 flex flex-col justify-between space-y-6 hover:border-brandAccent/50 transition-all">
-                    <div class="space-y-4">
-                        <div class="w-12 h-12 rounded-xl bg-brandAccent/10 text-brandAccent flex items-center justify-center text-xl">
-                            <i class="fa-solid fa-map-location-dot"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white">Google Maps Estratégico</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            Otimização completa do Perfil da Empresa no Google. Cadastro de produtos, fotos, palavras-chave da região e estratégia para gerar avaliações 5 estrelas.
-                        </p>
-                    </div>
-
-                    <a href="https://wa.me/5522992469892?text=Quero%20otimizar%20meu%20Google%20Maps" target="_blank"
-                        class="w-full bg-brandDark hover:bg-brandAccent hover:text-slate-950 text-slate-200 border border-borderDark font-bold py-3 rounded-xl transition-all text-xs text-center block">
-                        Saber mais sobre o Google Maps
-                    </a>
-                </div>
-
-                <!-- Card 2 (Destaque) -->
-                <div class="bg-cardDark border-2 border-brandAccent rounded-2xl p-8 flex flex-col justify-between space-y-6 relative shadow-xl shadow-brandAccent/5">
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brandAccent text-slate-950 text-[10px] font-extrabold uppercase tracking-wider px-3 py-0.5 rounded-full">
-                        Mais Procurado
-                    </div>
-                    <div class="space-y-4">
-                        <div class="w-12 h-12 rounded-xl bg-brandAccent text-slate-950 flex items-center justify-center text-xl">
-                            <i class="fa-solid fa-mobile-screen-button"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white">Site de Alta Conversão</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            Landing page ultrarrápida feita sob medida para seu negócio. Apresentação profissional dos seus serviços e direcionamento direto para o seu WhatsApp.
-                        </p>
-                    </div>
-
-                    <a href="https://wa.me/5522992469892?text=Quero%20um%20orçamento%20de%20site" target="_blank"
-                        class="w-full bg-brandAccent hover:bg-brandAccentHover text-slate-950 font-bold py-3 rounded-xl transition-all text-xs text-center block">
-                        Solicitar Orçamento de Site
-                    </a>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="bg-cardDark border border-borderDark rounded-2xl p-8 flex flex-col justify-between space-y-6 hover:border-brandAccent/50 transition-all">
-                    <div class="space-y-4">
-                        <div class="w-12 h-12 rounded-xl bg-brandAccent/10 text-brandAccent flex items-center justify-center text-xl">
-                            <i class="fa-solid fa-rocket"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white">Combo Presença Total</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            A estrutura completa para dominar seu nicho em Friburgo: Google Maps 100% otimizado integrado com site de vendas e botão de agendamento.
-                        </p>
-                    </div>
-
-                    <a href="https://wa.me/5522992469892?text=Quero%20o%20Combo%20Presença%20Total" target="_blank"
-                        class="w-full bg-brandDark hover:bg-brandAccent hover:text-slate-950 text-slate-200 border border-borderDark font-bold py-3 rounded-xl transition-all text-xs text-center block">
-                        Quero a Estrutura Completa
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ / DÚVIDAS FREQUENTES -->
-    <section class="py-16 bg-cardDark/30 border-t border-borderDark/60">
-        <div class="max-w-3xl mx-auto px-6 space-y-8">
-            <div class="text-center space-y-2">
-                <h2 class="text-2xl font-bold text-white">Perguntas Frequentes</h2>
-                <p class="text-xs text-slate-400">Tire suas dúvidas antes de solicitar a análise</p>
-            </div>
-
-            <div class="space-y-4 text-xs">
-                <div class="p-5 rounded-xl bg-cardDark border border-borderDark space-y-2">
-                    <h4 class="font-bold text-white text-sm">Em quanto tempo começo a ver resultados?</h4>
-                    <p class="text-slate-400 leading-relaxed">A otimização do Google Maps costuma refletir no aumento de pesquisas e rotas entre 7 a 21 dias. Já o site entra no ar pronto para receber tráfego em poucos dias após a entrega do material.</p>
-                </div>
-                <div class="p-5 rounded-xl bg-cardDark border border-borderDark space-y-2">
-                    <h4 class="font-bold text-white text-sm">Eu preciso pagar todo mês?</h4>
-                    <p class="text-slate-400 leading-relaxed">Não há contratos abusivos nem fidelidade oculta. Ofereço soluções de pagamento único para estruturação e opções de acompanhamento mensal caso você queira gestão contínua.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="border-t border-borderDark/60 py-8 text-center text-xs text-slate-500">
-        <p>© Eduardo Fenos — Presença Digital Local. Nova Friburgo/RJ.</p>
     </footer>
 
-    <!-- BOTÃO FLUTUANTE WHATSAPP -->
-    <a href="https://wa.me/5522992469892?text=Olá!" target="_blank"
-        class="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-brandAccent hover:bg-brandAccentHover text-slate-950 flex items-center justify-center text-2xl font-bold shadow-2xl transition-all hover:scale-110 z-50">
-        <i class="fa-brands fa-whatsapp"></i>
+    <a class="wa-float" href="https://wa.me/5522992469892?text=Ol%C3%A1%2C%20Eduardo%21%20Vim%20pelo%20seu%20site."
+        target="_blank" rel="noopener" aria-label="Conversar com Eduardo pelo WhatsApp">
+        <svg class="icon" aria-hidden="true"><use href="#i-wa" /></svg>
     </a>
 
+    <script src="assets/js/main.js" defer></script>
 </body>
+
 </html>
