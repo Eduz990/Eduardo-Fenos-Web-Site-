@@ -1,4 +1,4 @@
-/* Eduardo Fenos | Presença Digital — interações do site */
+/* Eduardo Fenos | Presença Digital: interações do site */
 (function () {
   'use strict';
 
@@ -7,7 +7,6 @@
   var toggle = document.querySelector('.nav-toggle');
   var waFloat = document.querySelector('.wa-float');
   var hero = document.getElementById('inicio');
-  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* Ano atual no rodapé */
   var year = document.querySelector('[data-year]');
@@ -70,7 +69,6 @@
 
   if (!('IntersectionObserver' in window)) {
     document.querySelectorAll('[data-reveal]').forEach(function (el) { el.classList.add('is-in'); });
-    document.querySelectorAll('[data-checklist] li').forEach(function (li) { li.classList.add('is-done'); });
     if (waFloat) waFloat.classList.add('is-visible');
     return;
   }
@@ -87,16 +85,6 @@
 
   document.querySelectorAll('[data-reveal]').forEach(function (el) {
     revealObserver.observe(el);
-  });
-
-  /* Checklist do Perfil da Empresa (hero) */
-  var checklist = document.querySelectorAll('[data-checklist] li');
-  checklist.forEach(function (li, i) {
-    if (reduceMotion) {
-      li.classList.add('is-done');
-    } else {
-      setTimeout(function () { li.classList.add('is-done'); }, 1700 + i * 380);
-    }
   });
 
   /* Botão flutuante aparece depois da primeira dobra */
