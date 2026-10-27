@@ -503,7 +503,7 @@ dd {
   height: 44px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center 22%;
+  object-position: center 38%;
   border: 2px solid var(--green);
 }
 
